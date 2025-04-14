@@ -1,0 +1,591 @@
+[
+  {
+    "bindings": {
+      "ctrl-cyrillic_te": "menu::SelectNext",
+      "ctrl-cyrillic_ze": "menu::SelectPrevious",
+      "ctrl-cyrillic_es": "menu::Cancel",
+      "ctrl-shift-cyrillic_tse": "workspace::CloseWindow",
+      "ctrl-cyrillic_shcha": "workspace::Open",
+      "ctrl-cyrillic_be": "zed::OpenSettings",
+      "ctrl-cyrillic_shorti": "zed::Quit",
+      "ctrl-alt-cyrillic_ya": "edit_prediction::RateCompletions",
+      "ctrl-shift-cyrillic_sha": "edit_prediction::ToggleMenu"
+    }
+  },
+  {
+    "context": "Picker || menu",
+    "bindings": {}
+  },
+  {
+    "context": "Prompt",
+    "bindings": {
+      "cyrillic_er": "menu::SelectPrevious",
+      "cyrillic_de": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-cyrillic_el": "editor::CutToEndOfLine",
+      "ctrl-k ctrl-cyrillic_shorti": "editor::Rewrap",
+      "ctrl-k cyrillic_shorti": "editor::Rewrap",
+      "ctrl-cyrillic_che": "editor::Cut",
+      "ctrl-cyrillic_es": "editor::Copy",
+      "ctrl-cyrillic_em": "editor::Paste",
+      "ctrl-cyrillic_ya": "editor::Undo",
+      "ctrl-cyrillic_en": "editor::Redo",
+      "ctrl-shift-cyrillic_ya": "editor::Redo",
+      "ctrl-cyrillic_ef": "editor::SelectAll",
+      "ctrl-cyrillic_de": "editor::SelectLine",
+      "ctrl-shift-cyrillic_sha": "editor::Format",
+      "alt-shift-cyrillic_shcha": "editor::OrganizeImports",
+      "ctrl-cyrillic_zhe": "editor::ToggleLineNumbers",
+      "ctrl-cyrillic_e": "editor::ToggleSelectedDiffHunks",
+      "ctrl-cyrillic_sha": "editor::ShowSignatureHelp",
+      "alt-g cyrillic_i": "editor::ToggleGitBlame",
+      "ctrl-shift-cyrillic_u": "editor::ToggleEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && !agent_diff",
+    "bindings": {
+      "ctrl-k ctrl-cyrillic_ka": "git::Restore",
+      "ctrl-alt-cyrillic_en": "git::ToggleStaged",
+      "alt-cyrillic_en": "git::StageAndNext",
+      "alt-shift-cyrillic_en": "git::UnstageAndNext"
+    }
+  },
+  {
+    "context": "AgentDiff",
+    "bindings": {
+      "ctrl-cyrillic_en": "agent::Keep",
+      "ctrl-k ctrl-cyrillic_ka": "agent::Reject"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-k ctrl-cyrillic_ya": "editor::ToggleSoftWrap",
+      "ctrl-k cyrillic_ya": "editor::ToggleSoftWrap",
+      "ctrl-cyrillic_a": "buffer_search::Deploy",
+      "ctrl-cyrillic_er": "buffer_search::DeployReplace",
+      "ctrl-alt-cyrillic_u": "editor::SelectEnclosingSymbol"
+    }
+  },
+  {
+    "context": "Editor && mode == full && edit_prediction",
+    "bindings": {
+      "alt-cyrillic_hardsign": "editor::NextEditPrediction",
+      "alt-cyrillic_ha": "editor::PreviousEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && !edit_prediction",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && mode == auto_height",
+    "bindings": {}
+  },
+  {
+    "context": "Markdown",
+    "bindings": {
+      "ctrl-cyrillic_es": "markdown::Copy"
+    }
+  },
+  {
+    "context": "AssistantPanel",
+    "bindings": {
+      "ctrl-k cyrillic_es": "assistant::CopyCode",
+      "ctrl-shift-cyrillic_u": "project_panel::ToggleFocus",
+      "ctrl-cyrillic_pe": "search::SelectNextMatch",
+      "ctrl-shift-cyrillic_pe": "search::SelectPreviousMatch",
+      "ctrl-k cyrillic_er": "assistant::DeployHistory",
+      "ctrl-k cyrillic_de": "assistant::OpenPromptLibrary",
+      "ctrl-cyrillic_ie": "assistant::NewChat",
+      "ctrl-cyrillic_te": "assistant::NewChat"
+    }
+  },
+  {
+    "context": "PromptLibrary",
+    "bindings": {
+      "ctrl-cyrillic_te": "prompt_library::NewPrompt",
+      "ctrl-shift-cyrillic_yeru": "prompt_library::ToggleDefaultPrompt"
+    }
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "ctrl-cyrillic_a": "search::FocusSearch",
+      "ctrl-cyrillic_er": "search::ToggleReplace",
+      "ctrl-cyrillic_de": "search::ToggleSelection"
+    }
+  },
+  {
+    "context": "BufferSearchBar && in_replace > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "BufferSearchBar && !in_replace > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "ProjectSearchBar",
+    "bindings": {
+      "ctrl-shift-cyrillic_a": "search::FocusSearch",
+      "ctrl-shift-cyrillic_er": "search::ToggleReplace",
+      "alt-ctrl-cyrillic_pe": "search::ToggleRegex",
+      "alt-ctrl-cyrillic_che": "search::ToggleRegex"
+    }
+  },
+  {
+    "context": "ProjectSearchBar > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "ProjectSearchBar && in_replace > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "ProjectSearchView",
+    "bindings": {
+      "ctrl-shift-cyrillic_er": "search::ToggleReplace",
+      "alt-ctrl-cyrillic_pe": "search::ToggleRegex",
+      "alt-ctrl-cyrillic_che": "search::ToggleRegex"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-cyrillic_tse": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ],
+      "alt-ctrl-cyrillic_ie": [
+        "pane::CloseInactiveItems",
+        {
+          "close_pinned": false
+        }
+      ],
+      "alt-ctrl-shift-cyrillic_tse": "workspace::CloseInactiveTabsAndPanes",
+      "ctrl-k cyrillic_u": [
+        "pane::CloseItemsToTheLeft",
+        {
+          "close_pinned": false
+        }
+      ],
+      "ctrl-k cyrillic_ie": [
+        "pane::CloseItemsToTheRight",
+        {
+          "close_pinned": false
+        }
+      ],
+      "ctrl-k cyrillic_ghe": [
+        "pane::CloseCleanItems",
+        {
+          "close_pinned": false
+        }
+      ],
+      "ctrl-k cyrillic_tse": [
+        "pane::CloseAllItems",
+        {
+          "close_pinned": false
+        }
+      ],
+      "ctrl-alt-cyrillic_pe": "search::SelectNextMatch",
+      "ctrl-alt-shift-cyrillic_pe": "search::SelectPreviousMatch",
+      "ctrl-shift-cyrillic_a": "project_search::ToggleFocus",
+      "ctrl-alt-shift-cyrillic_er": "search::ToggleReplace",
+      "ctrl-alt-shift-cyrillic_de": "search::ToggleSelection",
+      "alt-cyrillic_es": "search::ToggleCaseSensitive",
+      "alt-cyrillic_tse": "search::ToggleWholeWord",
+      "alt-ctrl-cyrillic_a": "project_search::ToggleFilters",
+      "ctrl-alt-shift-cyrillic_ka": "search::ToggleRegex",
+      "ctrl-alt-shift-cyrillic_che": "search::ToggleRegex",
+      "alt-cyrillic_ka": "search::ToggleRegex"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-cyrillic_ha": "editor::Outdent",
+      "ctrl-cyrillic_hardsign": "editor::Indent",
+      "ctrl-shift-cyrillic_el": "editor::DeleteLine",
+      "ctrl-shift-cyrillic_de": "editor::SelectAllMatches",
+      "ctrl-cyrillic_ve": [
+        "editor::SelectNext",
+        {
+          "replace_newest": false
+        }
+      ],
+      "ctrl-k ctrl-cyrillic_ve": [
+        "editor::SelectNext",
+        {
+          "replace_newest": true
+        }
+      ],
+      "ctrl-k ctrl-shift-cyrillic_ve": [
+        "editor::SelectPrevious",
+        {
+          "replace_newest": true
+        }
+      ],
+      "ctrl-k ctrl-cyrillic_sha": "editor::Hover",
+      "ctrl-cyrillic_ghe": "editor::UndoSelection",
+      "ctrl-shift-cyrillic_ghe": "editor::RedoSelection",
+      "ctrl-cyrillic_softsign": "editor::MoveToEnclosingBracket",
+      "ctrl-k ctrl-cyrillic_de": "editor::ToggleFold",
+      "ctrl-k ctrl-cyrillic_ha": "editor::FoldRecursive",
+      "ctrl-k ctrl-cyrillic_hardsign": "editor::UnfoldRecursive",
+      "ctrl-k ctrl-cyrillic_o": "editor::UnfoldAll",
+      "ctrl-cyrillic_yu": "editor::ToggleCodeActions",
+      "ctrl-k cyrillic_ka": "editor::RevealInFileManager",
+      "ctrl-k cyrillic_ze": "editor::CopyPath",
+      "ctrl-k cyrillic_em": "markdown::OpenPreviewToTheSide",
+      "ctrl-shift-cyrillic_em": "markdown::OpenPreview",
+      "ctrl-alt-shift-cyrillic_es": "editor::DisplayCursorNames",
+      "alt-cyrillic_yu": "editor::GoToHunk",
+      "alt-cyrillic_be": "editor::GoToPreviousHunk"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-shift-cyrillic_shcha": "outline::Toggle",
+      "ctrl-cyrillic_pe": "go_to_line::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-ctrl-cyrillic_shcha": "projects::OpenRecent",
+      "alt-ctrl-shift-cyrillic_shcha": "projects::OpenRemote",
+      "alt-ctrl-shift-cyrillic_i": "branches::OpenRecent",
+      "ctrl-cyrillic_yeru": "workspace::Save",
+      "ctrl-k cyrillic_yeru": "workspace::SaveWithoutFormat",
+      "ctrl-shift-cyrillic_yeru": "workspace::SaveAs",
+      "ctrl-cyrillic_te": "workspace::NewFile",
+      "ctrl-shift-cyrillic_te": "workspace::NewWindow",
+      "ctrl-cyrillic_io": "terminal_panel::ToggleFocus",
+      "ctrl-alt-cyrillic_i": "workspace::ToggleRightDock",
+      "ctrl-cyrillic_i": "workspace::ToggleLeftDock",
+      "ctrl-cyrillic_o": "workspace::ToggleBottomDock",
+      "ctrl-alt-cyrillic_en": "workspace::CloseAllDocks",
+      "ctrl-shift-cyrillic_a": "pane::DeploySearch",
+      "ctrl-shift-cyrillic_er": [
+        "pane::DeploySearch",
+        {
+          "replace_enabled": true
+        }
+      ],
+      "ctrl-shift-cyrillic_ie": "pane::ReopenClosedItem",
+      "ctrl-k ctrl-cyrillic_yeru": "zed::OpenKeymap",
+      "ctrl-k ctrl-cyrillic_ie": "theme_selector::Toggle",
+      "ctrl-cyrillic_ie": "project_symbols::Toggle",
+      "ctrl-cyrillic_ze": "file_finder::Toggle",
+      "ctrl-cyrillic_u": "file_finder::Toggle",
+      "ctrl-shift-cyrillic_ze": "command_palette::Toggle",
+      "ctrl-shift-cyrillic_softsign": "diagnostics::Deploy",
+      "ctrl-shift-cyrillic_u": "project_panel::ToggleFocus",
+      "ctrl-shift-cyrillic_i": "outline_panel::ToggleFocus",
+      "ctrl-shift-cyrillic_pe": "git_panel::ToggleFocus",
+      "ctrl-alt-cyrillic_yeru": "workspace::SaveAll",
+      "ctrl-k cyrillic_softsign": "language_selector::Toggle",
+      "ctrl-shift-cyrillic_che": "zed::Extensions",
+      "ctrl-shift-cyrillic_ka": "task::Rerun",
+      "ctrl-alt-cyrillic_ka": "task::Rerun",
+      "alt-cyrillic_ie": "task::Rerun",
+      "alt-shift-cyrillic_ie": "task::Spawn",
+      "alt-shift-cyrillic_ka": [
+        "task::Spawn",
+        {
+          "reveal_target": "center"
+        }
+      ]
+    }
+  },
+  {
+    "context": "ApplicationMenu",
+    "bindings": {}
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-cyrillic_ve": "editor::DuplicateLineDown",
+      "ctrl-shift-cyrillic_o": "editor::JoinLines",
+      "ctrl-alt-cyrillic_er": "editor::DeleteToPreviousSubwordStart",
+      "ctrl-alt-cyrillic_ve": "editor::DeleteToNextSubwordEnd",
+      "ctrl-alt-shift-cyrillic_i": "editor::SelectToPreviousSubwordStart",
+      "ctrl-alt-shift-cyrillic_a": "editor::SelectToNextSubwordEnd"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && renaming",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "alt-cyrillic_de": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      "alt-cyrillic_de": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && showing_code_actions",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-cyrillic_ze": "editor::ContextMenuPrevious",
+      "ctrl-cyrillic_te": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-shift-cyrillic_a": "workspace::FollowNextCollaborator",
+      "ctrl-alt-cyrillic_sha": "zed::DebugElements"
+    }
+  },
+  {
+    "context": "!Terminal",
+    "bindings": {
+      "ctrl-shift-cyrillic_es": "collab_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-shift-cyrillic_u": "pane::RevealInProjectPanel"
+    }
+  },
+  {
+    "context": "Editor && jupyter && !ContextEditor",
+    "bindings": {}
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "ctrl-cyrillic_yeru": "workspace::Save",
+      "ctrl-cyrillic_ka": "assistant::CycleMessageRole"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "ctrl-cyrillic_te": "agent::NewThread",
+      "ctrl-alt-cyrillic_te": "agent::NewPromptEditor",
+      "ctrl-shift-cyrillic_er": "agent::OpenHistory",
+      "ctrl-alt-cyrillic_es": "agent::OpenConfiguration",
+      "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
+      "ctrl-shift-cyrillic_ef": "agent::ToggleContextPicker",
+      "ctrl-cyrillic_u": "agent::ChatMode",
+      "ctrl-alt-cyrillic_u": "agent::RemoveAllContext"
+    }
+  },
+  {
+    "context": "AgentPanel > Markdown",
+    "bindings": {
+      "ctrl-cyrillic_es": "markdown::CopyAsMarkdown"
+    }
+  },
+  {
+    "context": "AgentPanel && prompt_editor",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-cyrillic_te": "agent::NewPromptEditor",
+      "cmd-alt-cyrillic_ie": "agent::NewThread"
+    }
+  },
+  {
+    "context": "MessageEditor > Editor",
+    "bindings": {
+      "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
+      "shift-ctrl-cyrillic_ka": "agent::OpenAgentDiff"
+    }
+  },
+  {
+    "context": "EditMessageEditor > Editor",
+    "use_key_equivalents": true,
+    "bindings": {}
+  },
+  {
+    "context": "AgentFeedbackMessageEditor > Editor",
+    "use_key_equivalents": true,
+    "bindings": {}
+  },
+  {
+    "context": "ContextStrip",
+    "bindings": {}
+  },
+  {
+    "context": "ThreadHistory",
+    "bindings": {}
+  },
+  {
+    "context": "PromptEditor",
+    "bindings": {
+      "ctrl-cyrillic_ha": "assistant::CyclePreviousInlineAssist",
+      "ctrl-cyrillic_hardsign": "assistant::CycleNextInlineAssist",
+      "ctrl-alt-cyrillic_u": "agent::RemoveAllContext"
+    }
+  },
+  {
+    "context": "ProjectSearchBar && !in_replace",
+    "bindings": {}
+  },
+  {
+    "context": "OutlinePanel && not_editing",
+    "bindings": {
+      "ctrl-alt-cyrillic_es": "outline_panel::CopyPath",
+      "alt-ctrl-shift-cyrillic_es": "workspace::CopyRelativePath",
+      "alt-ctrl-cyrillic_ka": "outline_panel::RevealInFileManager"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "ctrl-cyrillic_te": "project_panel::NewFile",
+      "alt-ctrl-cyrillic_te": "project_panel::NewDirectory",
+      "ctrl-cyrillic_che": "project_panel::Cut",
+      "ctrl-cyrillic_es": "project_panel::Copy",
+      "ctrl-cyrillic_em": "project_panel::Paste",
+      "ctrl-alt-cyrillic_es": "project_panel::CopyPath",
+      "alt-ctrl-shift-cyrillic_es": "workspace::CopyRelativePath",
+      "alt-ctrl-cyrillic_ka": "project_panel::RevealInFileManager",
+      "ctrl-shift-cyrillic_a": "project_panel::NewSearchInDirectory"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {}
+  },
+  {
+    "context": "GitPanel && ChangesList",
+    "bindings": {
+      "alt-cyrillic_en": "git::StageFile",
+      "alt-shift-cyrillic_en": "git::UnstageFile",
+      "ctrl-alt-cyrillic_en": "git::ToggleStaged"
+    }
+  },
+  {
+    "context": "GitCommit > Editor",
+    "bindings": {
+      "alt-cyrillic_de": "git::GenerateCommitMessage"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-g ctrl-cyrillic_pe": "git::Fetch",
+      "ctrl-g cyrillic_ve": "git::Diff"
+    }
+  },
+  {
+    "context": "GitDiff > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "AskPass > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "GitPanel > Editor",
+    "bindings": {
+      "alt-cyrillic_de": "git::GenerateCommitMessage"
+    }
+  },
+  {
+    "context": "CollabPanel && not_editing",
+    "bindings": {}
+  },
+  {
+    "context": "(CollabPanel && editing) > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "ChannelModal",
+    "bindings": {}
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "ChannelModal > Picker > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "FileFinder || (FileFinder > Picker > Editor) || (FileFinder > Picker > menu)",
+    "bindings": {
+      "ctrl-shift-cyrillic_ze": "file_finder::SelectPrevious",
+      "ctrl-cyrillic_o": "pane::SplitDown",
+      "ctrl-cyrillic_el": "pane::SplitUp",
+      "ctrl-cyrillic_er": "pane::SplitLeft",
+      "ctrl-cyrillic_de": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "TabSwitcher",
+    "bindings": {}
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-shift-cyrillic_es": "terminal::Copy",
+      "ctrl-shift-cyrillic_em": "terminal::Paste",
+      "alt-cyrillic_i": [
+        "terminal::SendText",
+        "\u001bb"
+      ],
+      "alt-cyrillic_a": [
+        "terminal::SendText",
+        "\u001bf"
+      ],
+      "ctrl-cyrillic_i": [
+        "terminal::SendKeystroke",
+        "ctrl-b"
+      ],
+      "ctrl-cyrillic_es": [
+        "terminal::SendKeystroke",
+        "ctrl-c"
+      ],
+      "ctrl-cyrillic_u": [
+        "terminal::SendKeystroke",
+        "ctrl-e"
+      ],
+      "ctrl-cyrillic_shcha": [
+        "terminal::SendKeystroke",
+        "ctrl-o"
+      ],
+      "ctrl-cyrillic_tse": [
+        "terminal::SendKeystroke",
+        "ctrl-w"
+      ],
+      "ctrl-shift-cyrillic_ef": "editor::SelectAll",
+      "ctrl-shift-cyrillic_a": "buffer_search::Deploy",
+      "ctrl-shift-cyrillic_de": "terminal::Clear",
+      "ctrl-shift-cyrillic_tse": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "ZedPredictModal",
+    "bindings": {}
+  }
+]
