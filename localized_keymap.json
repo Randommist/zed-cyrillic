@@ -59,7 +59,9 @@
     "context": "AgentDiff",
     "bindings": {
       "ctrl-cyrillic_en": "agent::Keep",
-      "ctrl-k ctrl-cyrillic_ka": "agent::Reject"
+      "ctrl-cyrillic_te": "agent::Reject",
+      "ctrl-shift-cyrillic_en": "agent::KeepAll",
+      "ctrl-shift-cyrillic_te": "agent::RejectAll"
     }
   },
   {
@@ -194,6 +196,7 @@
           "close_pinned": false
         }
       ],
+      "ctrl-k ctrl-cyrillic_tse": "workspace::CloseAllItemsAndPanes",
       "ctrl-alt-cyrillic_pe": "search::SelectNextMatch",
       "ctrl-alt-shift-cyrillic_pe": "search::SelectPreviousMatch",
       "ctrl-shift-cyrillic_a": "project_search::ToggleFocus",
@@ -389,7 +392,7 @@
     "context": "AgentPanel",
     "bindings": {
       "ctrl-cyrillic_te": "agent::NewThread",
-      "ctrl-alt-cyrillic_te": "agent::NewPromptEditor",
+      "ctrl-alt-cyrillic_te": "agent::NewTextThread",
       "ctrl-shift-cyrillic_er": "agent::OpenHistory",
       "ctrl-alt-cyrillic_es": "agent::OpenConfiguration",
       "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
@@ -408,7 +411,7 @@
     "context": "AgentPanel && prompt_editor",
     "use_key_equivalents": true,
     "bindings": {
-      "cmd-cyrillic_te": "agent::NewPromptEditor",
+      "cmd-cyrillic_te": "agent::NewTextThread",
       "cmd-alt-cyrillic_ie": "agent::NewThread"
     }
   },

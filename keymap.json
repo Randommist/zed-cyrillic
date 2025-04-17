@@ -159,7 +159,9 @@
     "context": "AgentDiff",
     "bindings": {
       "ctrl-y": "agent::Keep",
-      "ctrl-k ctrl-r": "agent::Reject"
+      "ctrl-n": "agent::Reject",
+      "ctrl-shift-y": "agent::KeepAll",
+      "ctrl-shift-n": "agent::RejectAll"
     }
   },
   {
@@ -320,6 +322,7 @@
       "ctrl-k t": ["pane::CloseItemsToTheRight", { "close_pinned": false }],
       "ctrl-k u": ["pane::CloseCleanItems", { "close_pinned": false }],
       "ctrl-k w": ["pane::CloseAllItems", { "close_pinned": false }],
+      "ctrl-k ctrl-w": "workspace::CloseAllItemsAndPanes",
       "back": "pane::GoBack",
       "ctrl-alt--": "pane::GoBack",
       "ctrl-alt-_": "pane::GoForward",
@@ -493,6 +496,8 @@
       "alt-shift-r": ["task::Spawn", { "reveal_target": "center" }]
       // also possible to spawn tasks by name:
       // "foo-bar": ["task::Spawn", { "task_name": "MyTask", "reveal_target": "dock" }]
+      // or by tag:
+      // "foo-bar": ["task::Spawn", { "task_tag": "MyTag" }],
     }
   },
   {
@@ -541,6 +546,7 @@
     "context": "Editor && showing_completions",
     "bindings": {
       "enter": "editor::ConfirmCompletion",
+      "shift-enter": "editor::ConfirmCompletionReplace",
       "tab": "editor::ComposeCompletion"
     }
   },
@@ -633,12 +639,13 @@
     "context": "AgentPanel",
     "bindings": {
       "ctrl-n": "agent::NewThread",
-      "ctrl-alt-n": "agent::NewPromptEditor",
+      "ctrl-alt-n": "agent::NewTextThread",
       "ctrl-shift-h": "agent::OpenHistory",
       "ctrl-alt-c": "agent::OpenConfiguration",
       "ctrl-i": "agent::ToggleProfileSelector",
       "ctrl-alt-/": "assistant::ToggleModelSelector",
       "ctrl-shift-a": "agent::ToggleContextPicker",
+      "shift-escape": "agent::ExpandMessageEditor",
       "ctrl-e": "agent::ChatMode",
       "ctrl-alt-e": "agent::RemoveAllContext"
     }
@@ -654,7 +661,7 @@
     "context": "AgentPanel && prompt_editor",
     "use_key_equivalents": true,
     "bindings": {
-      "cmd-n": "agent::NewPromptEditor",
+      "cmd-n": "agent::NewTextThread",
       "cmd-alt-t": "agent::NewThread"
     }
   },
