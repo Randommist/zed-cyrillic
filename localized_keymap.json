@@ -17,13 +17,6 @@
     "bindings": {}
   },
   {
-    "context": "Prompt",
-    "bindings": {
-      "cyrillic_er": "menu::SelectPrevious",
-      "cyrillic_de": "menu::SelectNext"
-    }
-  },
-  {
     "context": "Editor",
     "bindings": {
       "ctrl-cyrillic_el": "editor::CutToEndOfLine",
@@ -44,24 +37,6 @@
       "ctrl-cyrillic_sha": "editor::ShowSignatureHelp",
       "alt-g cyrillic_i": "editor::ToggleGitBlame",
       "ctrl-shift-cyrillic_u": "editor::ToggleEditPrediction"
-    }
-  },
-  {
-    "context": "Editor && !agent_diff",
-    "bindings": {
-      "ctrl-k ctrl-cyrillic_ka": "git::Restore",
-      "ctrl-alt-cyrillic_en": "git::ToggleStaged",
-      "alt-cyrillic_en": "git::StageAndNext",
-      "alt-shift-cyrillic_en": "git::UnstageAndNext"
-    }
-  },
-  {
-    "context": "AgentDiff",
-    "bindings": {
-      "ctrl-cyrillic_en": "agent::Keep",
-      "ctrl-cyrillic_te": "agent::Reject",
-      "ctrl-shift-cyrillic_en": "agent::KeepAll",
-      "ctrl-shift-cyrillic_te": "agent::RejectAll"
     }
   },
   {
@@ -96,6 +71,28 @@
     }
   },
   {
+    "context": "Editor && jupyter && !ContextEditor",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && !agent_diff",
+    "bindings": {
+      "ctrl-k ctrl-cyrillic_ka": "git::Restore",
+      "ctrl-alt-cyrillic_en": "git::ToggleStaged",
+      "alt-cyrillic_en": "git::StageAndNext",
+      "alt-shift-cyrillic_en": "git::UnstageAndNext"
+    }
+  },
+  {
+    "context": "AgentDiff",
+    "bindings": {
+      "ctrl-cyrillic_en": "agent::Keep",
+      "ctrl-cyrillic_te": "agent::Reject",
+      "ctrl-shift-cyrillic_en": "agent::KeepAll",
+      "ctrl-shift-cyrillic_te": "agent::RejectAll"
+    }
+  },
+  {
     "context": "AssistantPanel",
     "bindings": {
       "ctrl-k cyrillic_es": "assistant::CopyCode",
@@ -107,6 +104,63 @@
       "ctrl-cyrillic_ie": "assistant::NewChat",
       "ctrl-cyrillic_te": "assistant::NewChat"
     }
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "ctrl-cyrillic_yeru": "workspace::Save",
+      "ctrl-cyrillic_ka": "assistant::CycleMessageRole"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "ctrl-cyrillic_te": "agent::NewThread",
+      "ctrl-alt-cyrillic_te": "agent::NewTextThread",
+      "ctrl-shift-cyrillic_er": "agent::OpenHistory",
+      "ctrl-alt-cyrillic_es": "agent::OpenConfiguration",
+      "ctrl-alt-cyrillic_ze": "assistant::OpenPromptLibrary",
+      "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
+      "ctrl-shift-cyrillic_ef": "agent::ToggleContextPicker",
+      "ctrl-cyrillic_u": "agent::ChatMode",
+      "ctrl-alt-cyrillic_u": "agent::RemoveAllContext"
+    }
+  },
+  {
+    "context": "AgentPanel > Markdown",
+    "bindings": {
+      "ctrl-cyrillic_es": "markdown::CopyAsMarkdown"
+    }
+  },
+  {
+    "context": "AgentPanel && prompt_editor",
+    "bindings": {
+      "cmd-cyrillic_te": "agent::NewTextThread",
+      "cmd-alt-cyrillic_ie": "agent::NewThread"
+    }
+  },
+  {
+    "context": "MessageEditor > Editor",
+    "bindings": {
+      "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
+      "shift-ctrl-cyrillic_ka": "agent::OpenAgentDiff"
+    }
+  },
+  {
+    "context": "EditMessageEditor > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "AgentFeedbackMessageEditor > Editor",
+    "bindings": {}
+  },
+  {
+    "context": "ContextStrip",
+    "bindings": {}
+  },
+  {
+    "context": "ThreadHistory",
+    "bindings": {}
   },
   {
     "context": "PromptLibrary",
@@ -378,74 +432,18 @@
     }
   },
   {
-    "context": "Editor && jupyter && !ContextEditor",
-    "bindings": {}
-  },
-  {
-    "context": "ContextEditor > Editor",
-    "bindings": {
-      "ctrl-cyrillic_yeru": "workspace::Save",
-      "ctrl-cyrillic_ka": "assistant::CycleMessageRole"
-    }
-  },
-  {
-    "context": "AgentPanel",
-    "bindings": {
-      "ctrl-cyrillic_te": "agent::NewThread",
-      "ctrl-alt-cyrillic_te": "agent::NewTextThread",
-      "ctrl-shift-cyrillic_er": "agent::OpenHistory",
-      "ctrl-alt-cyrillic_es": "agent::OpenConfiguration",
-      "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
-      "ctrl-shift-cyrillic_ef": "agent::ToggleContextPicker",
-      "ctrl-cyrillic_u": "agent::ChatMode",
-      "ctrl-alt-cyrillic_u": "agent::RemoveAllContext"
-    }
-  },
-  {
-    "context": "AgentPanel > Markdown",
-    "bindings": {
-      "ctrl-cyrillic_es": "markdown::CopyAsMarkdown"
-    }
-  },
-  {
-    "context": "AgentPanel && prompt_editor",
-    "use_key_equivalents": true,
-    "bindings": {
-      "cmd-cyrillic_te": "agent::NewTextThread",
-      "cmd-alt-cyrillic_ie": "agent::NewThread"
-    }
-  },
-  {
-    "context": "MessageEditor > Editor",
-    "bindings": {
-      "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
-      "shift-ctrl-cyrillic_ka": "agent::OpenAgentDiff"
-    }
-  },
-  {
-    "context": "EditMessageEditor > Editor",
-    "use_key_equivalents": true,
-    "bindings": {}
-  },
-  {
-    "context": "AgentFeedbackMessageEditor > Editor",
-    "use_key_equivalents": true,
-    "bindings": {}
-  },
-  {
-    "context": "ContextStrip",
-    "bindings": {}
-  },
-  {
-    "context": "ThreadHistory",
-    "bindings": {}
-  },
-  {
     "context": "PromptEditor",
     "bindings": {
       "ctrl-cyrillic_ha": "assistant::CyclePreviousInlineAssist",
       "ctrl-cyrillic_hardsign": "assistant::CycleNextInlineAssist",
       "ctrl-alt-cyrillic_u": "agent::RemoveAllContext"
+    }
+  },
+  {
+    "context": "Prompt",
+    "bindings": {
+      "cyrillic_er": "menu::SelectPrevious",
+      "cyrillic_de": "menu::SelectNext"
     }
   },
   {
@@ -487,6 +485,11 @@
     }
   },
   {
+    "context": "GitPanel && CommitEditor",
+    "use_key_equivalents": true,
+    "bindings": {}
+  },
+  {
     "context": "GitCommit > Editor",
     "bindings": {
       "alt-cyrillic_de": "git::GenerateCommitMessage"
@@ -494,7 +497,6 @@
   },
   {
     "context": "GitPanel",
-    "use_key_equivalents": true,
     "bindings": {
       "ctrl-g ctrl-cyrillic_pe": "git::Fetch",
       "ctrl-g cyrillic_ve": "git::Diff"
