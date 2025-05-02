@@ -100,7 +100,7 @@
       "ctrl-cyrillic_pe": "search::SelectNextMatch",
       "ctrl-shift-cyrillic_pe": "search::SelectPreviousMatch",
       "ctrl-k cyrillic_er": "assistant::DeployHistory",
-      "ctrl-k cyrillic_de": "assistant::OpenPromptLibrary",
+      "ctrl-k cyrillic_de": "assistant::OpenRulesLibrary",
       "ctrl-cyrillic_ie": "assistant::NewChat",
       "ctrl-cyrillic_te": "assistant::NewChat"
     }
@@ -119,7 +119,7 @@
       "ctrl-alt-cyrillic_te": "agent::NewTextThread",
       "ctrl-shift-cyrillic_er": "agent::OpenHistory",
       "ctrl-alt-cyrillic_es": "agent::OpenConfiguration",
-      "ctrl-alt-cyrillic_ze": "assistant::OpenPromptLibrary",
+      "ctrl-alt-cyrillic_ze": "assistant::OpenRulesLibrary",
       "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
       "ctrl-shift-cyrillic_ef": "agent::ToggleContextPicker",
       "ctrl-cyrillic_u": "agent::ChatMode",
@@ -165,8 +165,8 @@
   {
     "context": "PromptLibrary",
     "bindings": {
-      "ctrl-cyrillic_te": "prompt_library::NewPrompt",
-      "ctrl-shift-cyrillic_yeru": "prompt_library::ToggleDefaultPrompt"
+      "ctrl-cyrillic_te": "rules_library::NewRule",
+      "ctrl-shift-cyrillic_yeru": "rules_library::ToggleDefaultRule"
     }
   },
   {
@@ -426,7 +426,7 @@
     }
   },
   {
-    "context": "Editor && mode == full",
+    "context": "!ContextEditor > Editor && mode == full",
     "bindings": {
       "ctrl-shift-cyrillic_u": "pane::RevealInProjectPanel"
     }
@@ -562,6 +562,10 @@
       "alt-cyrillic_a": [
         "terminal::SendText",
         "\u001bf"
+      ],
+      "alt-cyrillic_yu": [
+        "terminal::SendText",
+        "\u001b."
       ],
       "ctrl-cyrillic_i": [
         "terminal::SendKeystroke",
