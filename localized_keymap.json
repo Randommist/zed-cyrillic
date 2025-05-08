@@ -84,6 +84,16 @@
     }
   },
   {
+    "context": "Editor && editor_agent_diff",
+    "bindings": {
+      "ctrl-cyrillic_en": "agent::Keep",
+      "ctrl-cyrillic_te": "agent::Reject",
+      "ctrl-shift-cyrillic_en": "agent::KeepAll",
+      "ctrl-shift-cyrillic_te": "agent::RejectAll",
+      "shift-ctrl-cyrillic_ka": "agent::OpenAgentDiff"
+    }
+  },
+  {
     "context": "AgentDiff",
     "bindings": {
       "ctrl-cyrillic_en": "agent::Keep",
@@ -100,7 +110,7 @@
       "ctrl-cyrillic_pe": "search::SelectNextMatch",
       "ctrl-shift-cyrillic_pe": "search::SelectPreviousMatch",
       "ctrl-k cyrillic_er": "assistant::DeployHistory",
-      "ctrl-k cyrillic_de": "assistant::OpenRulesLibrary",
+      "ctrl-k cyrillic_de": "agent::OpenRulesLibrary",
       "ctrl-cyrillic_ie": "assistant::NewChat",
       "ctrl-cyrillic_te": "assistant::NewChat"
     }
@@ -109,7 +119,11 @@
     "context": "ContextEditor > Editor",
     "bindings": {
       "ctrl-cyrillic_yeru": "workspace::Save",
-      "ctrl-cyrillic_ka": "assistant::CycleMessageRole"
+      "ctrl-cyrillic_ka": "assistant::CycleMessageRole",
+      "ctrl-k cyrillic_es": "assistant::CopyCode",
+      "ctrl-cyrillic_pe": "search::SelectNextMatch",
+      "ctrl-shift-cyrillic_pe": "search::SelectPreviousMatch",
+      "ctrl-k cyrillic_de": "agent::OpenRulesLibrary"
     }
   },
   {
@@ -119,12 +133,18 @@
       "ctrl-alt-cyrillic_te": "agent::NewTextThread",
       "ctrl-shift-cyrillic_er": "agent::OpenHistory",
       "ctrl-alt-cyrillic_es": "agent::OpenConfiguration",
-      "ctrl-alt-cyrillic_ze": "assistant::OpenRulesLibrary",
+      "ctrl-alt-cyrillic_ze": "agent::OpenRulesLibrary",
       "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
       "ctrl-shift-cyrillic_ef": "agent::ToggleContextPicker",
-      "ctrl-cyrillic_u": "agent::ChatMode",
-      "ctrl-alt-cyrillic_u": "agent::RemoveAllContext"
+      "ctrl-shift-cyrillic_shcha": "agent::ToggleNavigationMenu",
+      "ctrl-shift-cyrillic_sha": "agent::ToggleOptionsMenu",
+      "ctrl-alt-cyrillic_u": "agent::RemoveAllContext",
+      "ctrl-shift-cyrillic_u": "project_panel::ToggleFocus"
     }
+  },
+  {
+    "context": "AgentPanel > NavigationMenu",
+    "bindings": {}
   },
   {
     "context": "AgentPanel > Markdown",
@@ -595,6 +615,10 @@
   },
   {
     "context": "ZedPredictModal",
+    "bindings": {}
+  },
+  {
+    "context": "ConfigureContextServerModal > Editor",
     "bindings": {}
   }
 ]
