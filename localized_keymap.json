@@ -103,19 +103,6 @@
     }
   },
   {
-    "context": "AssistantPanel",
-    "bindings": {
-      "ctrl-k cyrillic_es": "assistant::CopyCode",
-      "ctrl-shift-cyrillic_u": "project_panel::ToggleFocus",
-      "ctrl-cyrillic_pe": "search::SelectNextMatch",
-      "ctrl-shift-cyrillic_pe": "search::SelectPreviousMatch",
-      "ctrl-k cyrillic_er": "assistant::DeployHistory",
-      "ctrl-k cyrillic_de": "agent::OpenRulesLibrary",
-      "ctrl-cyrillic_ie": "assistant::NewChat",
-      "ctrl-cyrillic_te": "assistant::NewChat"
-    }
-  },
-  {
     "context": "ContextEditor > Editor",
     "bindings": {
       "ctrl-cyrillic_yeru": "workspace::Save",
@@ -454,8 +441,8 @@
   {
     "context": "PromptEditor",
     "bindings": {
-      "ctrl-cyrillic_ha": "assistant::CyclePreviousInlineAssist",
-      "ctrl-cyrillic_hardsign": "assistant::CycleNextInlineAssist",
+      "ctrl-cyrillic_ha": "agent::CyclePreviousInlineAssist",
+      "ctrl-cyrillic_hardsign": "agent::CycleNextInlineAssist",
       "ctrl-alt-cyrillic_u": "agent::RemoveAllContext"
     }
   },
