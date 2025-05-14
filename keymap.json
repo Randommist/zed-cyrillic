@@ -254,7 +254,7 @@
       "ctrl-shift-a": "agent::ToggleContextPicker",
       "ctrl-shift-o": "agent::ToggleNavigationMenu",
       "ctrl-shift-i": "agent::ToggleOptionsMenu",
-      "shift-escape": "agent::ExpandMessageEditor",
+      "shift-alt-escape": "agent::ExpandMessageEditor",
       "ctrl-alt-e": "agent::RemoveAllContext",
       "ctrl-shift-e": "project_panel::ToggleFocus"
     }
@@ -979,6 +979,13 @@
       "escape": "menu::Cancel",
       "enter": "editor::Newline",
       "ctrl-enter": "menu::Confirm"
+    }
+  },
+  {
+    "context": "Diagnostics",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-r": "diagnostics::ToggleDiagnosticsRefresh"
     }
   }
 ]
