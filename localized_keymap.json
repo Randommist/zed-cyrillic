@@ -9,7 +9,8 @@
       "ctrl-cyrillic_be": "zed::OpenSettings",
       "ctrl-cyrillic_shorti": "zed::Quit",
       "ctrl-alt-cyrillic_ya": "edit_prediction::RateCompletions",
-      "ctrl-shift-cyrillic_sha": "edit_prediction::ToggleMenu"
+      "ctrl-shift-cyrillic_sha": "edit_prediction::ToggleMenu",
+      "ctrl-alt-cyrillic_de": "lsp_tool::ToggleMenu"
     }
   },
   {
@@ -35,7 +36,8 @@
       "ctrl-cyrillic_zhe": "editor::ToggleLineNumbers",
       "ctrl-cyrillic_e": "editor::ToggleSelectedDiffHunks",
       "ctrl-cyrillic_sha": "editor::ShowSignatureHelp",
-      "alt-g cyrillic_i": "editor::ToggleGitBlame",
+      "alt-g cyrillic_i": "git::Blame",
+      "alt-g cyrillic_softsign": "git::OpenModifiedFiles",
       "ctrl-shift-cyrillic_u": "editor::ToggleEditPrediction"
     }
   },
@@ -123,10 +125,11 @@
       "ctrl-alt-cyrillic_ze": "agent::OpenRulesLibrary",
       "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
       "ctrl-shift-cyrillic_ef": "agent::ToggleContextPicker",
-      "ctrl-shift-cyrillic_shcha": "agent::ToggleNavigationMenu",
+      "ctrl-shift-cyrillic_o": "agent::ToggleNavigationMenu",
       "ctrl-shift-cyrillic_sha": "agent::ToggleOptionsMenu",
       "ctrl-alt-cyrillic_u": "agent::RemoveAllContext",
-      "ctrl-shift-cyrillic_u": "project_panel::ToggleFocus"
+      "ctrl-shift-cyrillic_u": "project_panel::ToggleFocus",
+      "super-ctrl-cyrillic_i": "agent::ToggleBurnMode"
     }
   },
   {
@@ -142,15 +145,17 @@
   {
     "context": "AgentPanel && prompt_editor",
     "bindings": {
-      "cmd-cyrillic_te": "agent::NewTextThread",
-      "cmd-alt-cyrillic_ie": "agent::NewThread"
+      "ctrl-cyrillic_te": "agent::NewTextThread",
+      "ctrl-alt-cyrillic_ie": "agent::NewThread"
     }
   },
   {
     "context": "MessageEditor > Editor",
     "bindings": {
       "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
-      "shift-ctrl-cyrillic_ka": "agent::OpenAgentDiff"
+      "shift-ctrl-cyrillic_ka": "agent::OpenAgentDiff",
+      "ctrl-shift-cyrillic_en": "agent::KeepAll",
+      "ctrl-shift-cyrillic_te": "agent::RejectAll"
     }
   },
   {
@@ -307,11 +312,25 @@
       "ctrl-cyrillic_yu": "editor::ToggleCodeActions",
       "ctrl-k cyrillic_ka": "editor::RevealInFileManager",
       "ctrl-k cyrillic_ze": "editor::CopyPath",
-      "ctrl-k cyrillic_em": "markdown::OpenPreviewToTheSide",
-      "ctrl-shift-cyrillic_em": "markdown::OpenPreview",
       "ctrl-alt-shift-cyrillic_es": "editor::DisplayCursorNames",
       "alt-cyrillic_yu": "editor::GoToHunk",
       "alt-cyrillic_be": "editor::GoToPreviousHunk"
+    }
+  },
+  {
+    "context": "Editor && extension == md",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-k cyrillic_em": "markdown::OpenPreviewToTheSide",
+      "ctrl-shift-cyrillic_em": "markdown::OpenPreview"
+    }
+  },
+  {
+    "context": "Editor && extension == svg",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-k cyrillic_em": "svg::OpenPreviewToTheSide",
+      "ctrl-shift-cyrillic_em": "svg::OpenPreview"
     }
   },
   {
@@ -324,8 +343,19 @@
   {
     "context": "Workspace",
     "bindings": {
-      "alt-ctrl-cyrillic_shcha": "projects::OpenRecent",
-      "alt-ctrl-shift-cyrillic_shcha": "projects::OpenRemote",
+      "alt-ctrl-cyrillic_shcha": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": false
+        }
+      ],
+      "alt-ctrl-shift-cyrillic_shcha": [
+        "projects::OpenRemote",
+        {
+          "from_existing_connection": false,
+          "create_new_window": false
+        }
+      ],
       "alt-ctrl-shift-cyrillic_i": "branches::OpenRecent",
       "ctrl-cyrillic_yeru": "workspace::Save",
       "ctrl-k cyrillic_yeru": "workspace::SaveWithoutFormat",
@@ -355,6 +385,7 @@
       "ctrl-shift-cyrillic_u": "project_panel::ToggleFocus",
       "ctrl-shift-cyrillic_i": "outline_panel::ToggleFocus",
       "ctrl-shift-cyrillic_pe": "git_panel::ToggleFocus",
+      "ctrl-shift-cyrillic_ve": "debug_panel::ToggleFocus",
       "ctrl-alt-cyrillic_yeru": "workspace::SaveAll",
       "ctrl-k cyrillic_softsign": "language_selector::Toggle",
       "ctrl-shift-cyrillic_che": "zed::Extensions",
@@ -367,8 +398,17 @@
         {
           "reveal_target": "center"
         }
-      ]
+      ],
+      "ctrl-cyrillic_tse": "workspace::CloseActiveDock"
     }
+  },
+  {
+    "context": "Workspace && debugger_running",
+    "bindings": {}
+  },
+  {
+    "context": "Workspace && debugger_stopped",
+    "bindings": {}
   },
   {
     "context": "ApplicationMenu",
@@ -377,7 +417,6 @@
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-shift-cyrillic_ve": "editor::DuplicateLineDown",
       "ctrl-shift-cyrillic_o": "editor::JoinLines",
       "ctrl-alt-cyrillic_er": "editor::DeleteToPreviousSubwordStart",
       "ctrl-alt-cyrillic_ve": "editor::DeleteToNextSubwordEnd",
@@ -421,9 +460,13 @@
     }
   },
   {
+    "context": "Editor && showing_signature_help && !showing_completions",
+    "bindings": {}
+  },
+  {
     "bindings": {
       "ctrl-alt-shift-cyrillic_a": "workspace::FollowNextCollaborator",
-      "ctrl-alt-cyrillic_sha": "zed::DebugElements"
+      "ctrl-alt-cyrillic_sha": "dev::ToggleInspector"
     }
   },
   {
@@ -476,7 +519,7 @@
       "ctrl-alt-cyrillic_es": "project_panel::CopyPath",
       "alt-ctrl-shift-cyrillic_es": "workspace::CopyRelativePath",
       "alt-ctrl-cyrillic_ka": "project_panel::RevealInFileManager",
-      "ctrl-shift-cyrillic_a": "project_panel::NewSearchInDirectory"
+      "ctrl-alt-shift-cyrillic_a": "project_panel::NewSearchInDirectory"
     }
   },
   {
@@ -524,6 +567,24 @@
     }
   },
   {
+    "context": "DebugPanel",
+    "bindings": {
+      "ctrl-cyrillic_ie": "debugger::ToggleThreadPicker",
+      "ctrl-cyrillic_sha": "debugger::ToggleSessionPicker"
+    }
+  },
+  {
+    "context": "VariableList",
+    "bindings": {
+      "ctrl-cyrillic_es": "variable_list::CopyVariableValue",
+      "ctrl-alt-cyrillic_es": "variable_list::CopyVariableName"
+    }
+  },
+  {
+    "context": "BreakpointList",
+    "bindings": {}
+  },
+  {
     "context": "CollabPanel && not_editing",
     "bindings": {}
   },
@@ -542,6 +603,13 @@
   {
     "context": "ChannelModal > Picker > Editor",
     "bindings": {}
+  },
+  {
+    "context": "FileFinder || (FileFinder > Picker > Editor)",
+    "bindings": {
+      "ctrl-shift-cyrillic_ef": "file_finder::ToggleSplitMenu",
+      "ctrl-shift-cyrillic_sha": "file_finder::ToggleFilterMenu"
+    }
   },
   {
     "context": "FileFinder || (FileFinder > Picker > Editor) || (FileFinder > Picker > menu)",
@@ -597,7 +665,10 @@
       "ctrl-shift-cyrillic_ef": "editor::SelectAll",
       "ctrl-shift-cyrillic_a": "buffer_search::Deploy",
       "ctrl-shift-cyrillic_de": "terminal::Clear",
-      "ctrl-shift-cyrillic_tse": "pane::CloseActiveItem"
+      "ctrl-shift-cyrillic_tse": "pane::CloseActiveItem",
+      "ctrl-shift-cyrillic_ka": "terminal::RerunTask",
+      "ctrl-alt-cyrillic_ka": "terminal::RerunTask",
+      "alt-cyrillic_ie": "terminal::RerunTask"
     }
   },
   {
@@ -613,6 +684,26 @@
     "use_key_equivalents": true,
     "bindings": {
       "ctrl-cyrillic_ka": "diagnostics::ToggleDiagnosticsRefresh"
+    }
+  },
+  {
+    "context": "DebugConsole > Editor",
+    "use_key_equivalents": true,
+    "bindings": {}
+  },
+  {
+    "context": "RunModal",
+    "bindings": {}
+  },
+  {
+    "context": "MarkdownPreview",
+    "bindings": {}
+  },
+  {
+    "context": "KeymapEditor",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-cyrillic_a": "search::FocusSearch"
     }
   }
 ]
